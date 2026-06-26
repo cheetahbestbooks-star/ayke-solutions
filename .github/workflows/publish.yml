@@ -1,0 +1,30 @@
+name: Publier les articles du blog
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Regenerer blog.html
+        run: node build-blog.js
+      - name: Committer si blog.html a change
+        run: |
+          git config user.name "Ayke Blog Bot"
+          git config user.email "actions@github.com"
+          if [ -n "$(git status --porcelain blog.html)" ]; then
+            git add blog.html
+            git commit -m "Publication auto du blog ($(date +%F))"
+            git push
+          else
+            echo "Rien de nouveau a publier aujourd hui."
+          fi
