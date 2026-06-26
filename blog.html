@@ -97,21 +97,21 @@ a{text-decoration:none;color:inherit}
     <div class="pillar-sub">Pour les artisans, installateurs et PME qui veulent générer leurs propres demandes de devis.</div>
     <div class="grid">
       <a class="post-card local" href="avis-google-clients.html">
-        <div class="post-top"><img src="avis-google-clients.png" alt="Comment obtenir (vraiment) des avis Google clients" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='⭐'"></div>
+        <div class="post-top"><img src="avis-google-clients.png?v=3" alt="Comment obtenir (vraiment) des avis Google clients" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='⭐'"></div>
         <div class="post-body">
           <p>Le process simple pour passer de 2 à 20 avis en quelques semaines, et pourquoi répondre à tous change tout.</p>
           <div class="post-meta">📅 25 juin 2026 · ⏱️ 6 min</div>
         </div>
       </a>
       <a class="post-card local" href="fiche-google-business-artisan.html">
-        <div class="post-top"><img src="fiche-google-business-artisan.png" alt="Optimiser sa fiche Google Business quand on est artisan" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='📍'"></div>
+        <div class="post-top"><img src="fiche-google-business-artisan.png?v=3" alt="Optimiser sa fiche Google Business quand on est artisan" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='📍'"></div>
         <div class="post-body">
           <p>Le guide étape par étape pour transformer votre fiche en générateur d'appels — catégories, photos, posts, zone d'intervention.</p>
           <div class="post-meta">📅 23 juin 2026 · ⏱️ 7 min</div>
         </div>
       </a>
       <a class="post-card local" href="generer-devis-sans-acheter-leads.html">
-        <div class="post-top"><img src="generer-devis-sans-acheter-leads.png" alt="5 façons de générer vos demandes de devis sans acheter de leads" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='🔧'"></div>
+        <div class="post-top"><img src="generer-devis-sans-acheter-leads.png?v=3" alt="5 façons de générer vos demandes de devis sans acheter de leads" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='🔧'"></div>
         <div class="post-body">
           <p>Fiche Google, avis, site qui convertit, SEO local : les 5 leviers pour générer vos propres demandes — sans dépendre des plateformes payantes.</p>
           <div class="post-meta">📅 19 juin 2026 · ⏱️ 6 min</div>
@@ -124,21 +124,21 @@ a{text-decoration:none;color:inherit}
     <div class="pillar-sub">Pour les marques Shopify qui veulent vendre plus grâce à l'email.</div>
     <div class="grid">
       <a class="post-card ecom" href="welcome-series-klaviyo.html">
-        <div class="post-top"><img src="welcome-series-klaviyo.png" alt="Welcome Series : 5 emails pour convertir vos nouveaux abonnés" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='👋'"></div>
+        <div class="post-top"><img src="welcome-series-klaviyo.png?v=3" alt="Welcome Series : 5 emails pour convertir vos nouveaux abonnés" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='👋'"></div>
         <div class="post-body">
           <p>Structure, timing et copywriting d'une séquence de bienvenue qui déclenche le premier achat.</p>
           <div class="post-meta">📅 26 juin 2026 · ⏱️ 7 min</div>
         </div>
       </a>
       <a class="post-card ecom" href="email-abandon-panier.html">
-        <div class="post-top"><img src="email-abandon-panier.png" alt="Emails d'abandon panier : récupérez +30% de ventes perdues" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='🛒'"></div>
+        <div class="post-top"><img src="email-abandon-panier.png?v=3" alt="Emails d'abandon panier : récupérez +30% de ventes perdues" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='🛒'"></div>
         <div class="post-body">
           <p>La séquence exacte (timing, nombre d'emails, copywriting) pour récupérer les paniers abandonnés sur Shopify.</p>
           <div class="post-meta">📅 24 juin 2026 · ⏱️ 8 min</div>
         </div>
       </a>
       <a class="post-card ecom" href="flows-klaviyo-indispensables.html">
-        <div class="post-top"><img src="flows-klaviyo-indispensables.png" alt="Les 7 flows Klaviyo indispensables pour votre boutique Shopify" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='📧'"></div>
+        <div class="post-top"><img src="flows-klaviyo-indispensables.png?v=3" alt="Les 7 flows Klaviyo indispensables pour votre boutique Shopify" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='📧'"></div>
         <div class="post-body">
           <p>Welcome, panier abandonné, post-achat… le guide complet pour transformer Klaviyo en machine à vendre.</p>
           <div class="post-meta">📅 20 juin 2026 · ⏱️ 13 min</div>
@@ -157,8 +157,14 @@ a{text-decoration:none;color:inherit}
 </div></footer>
 <script>
 const pills=document.querySelectorAll('.pill');const sections=document.querySelectorAll('.pillar');
-pills.forEach(p=>p.addEventListener('click',()=>{pills.forEach(x=>x.classList.remove('active'));p.classList.add('active');
-  const f=p.dataset.f;sections.forEach(s=>{s.style.display=(f==='all'||s.dataset.pillar===f)?'block':'none';});}));
+pills.forEach(p=>p.addEventListener('click',()=>{
+  pills.forEach(x=>{x.classList.remove('active');x.style.background='';x.style.borderColor='';});
+  p.classList.add('active');
+  const f=p.dataset.f;
+  const col=(f==='ecom')?'var(--v2-blue)':'var(--v2-coral)';
+  p.style.background=col;p.style.borderColor=col;
+  sections.forEach(s=>{s.style.display=(f==='all'||s.dataset.pillar===f)?'block':'none';});
+}));
 </script>
 </body>
 </html>
