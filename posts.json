@@ -1,69 +1,202 @@
-<!doctype html><html lang="fr"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Un site qui transforme les visiteurs en demandes de devis | Ayke Solutions</title>
-<meta name="description" content="Pourquoi un site « plaquette » ne sert à rien, et les 6 éléments d&#x27;un site d&#x27;artisan ou de PME qui génère réellement des demandes de devis.">
-<meta name="keywords" content="site qui convertit PME devis">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://ayke-solutions.com/blog/posts/site-qui-convertit-pme.html">
-<meta property="og:type" content="article"><meta property="og:title" content="Un site qui transforme les visiteurs en demandes de devis">
-<meta property="og:image" content="https://ayke-solutions.com/blog/thumbs/site-qui-convertit-pme.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@700&display=swap" rel="stylesheet">
-<style>:root{--navy:#1a2744;--coral:#e8845c;--blue:#1565C0;--v2-bg:#030c1a;--v2-coral:#ff5a2c;--v2-blue:#0ea5e9}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;color:#1e2432;background:#fff;line-height:1.78;font-size:17px}
-a{color:inherit;text-decoration:none}
-.top-line{position:fixed;top:0;left:0;right:0;height:3px;z-index:1001;background:linear-gradient(90deg,var(--v2-coral),var(--v2-blue),#00ffd4,var(--v2-coral));background-size:300% 100%;animation:gl 4s linear infinite}
-@keyframes gl{0%{background-position:0 0}100%{background-position:300% 0}}
-.header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 0;background:rgba(3,12,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
-.hin{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.logo-link{display:flex;align-items:center}.logo-link img{height:46px;width:auto;display:block}
-.logo-fallback{font-family:"Oswald",sans-serif;font-size:1.2rem;font-weight:700;color:#fff}.logo-fallback b{color:var(--v2-coral)}
-.nav{display:flex;gap:26px;align-items:center}.nav a{color:rgba(255,255,255,.78);font-size:.88rem;font-weight:500}.nav a.active,.nav a:hover{color:#fff}
-.nav .btn{background:linear-gradient(135deg,#e8845c,#d6734b);color:#fff;padding:10px 18px;border-radius:8px;font-weight:600;font-size:.82rem}
-.wrap{max-width:740px;margin:0 auto;padding:120px 22px 40px}
-.kicker{font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase}
-h1{color:var(--navy);font-size:clamp(28px,4.5vw,38px);line-height:1.15;margin:10px 0 8px}
-.lead{font-size:19px;color:#5b6472}
-.meta{font-size:14px;color:#8a93a3;border-bottom:2px solid #eef1f6;padding-bottom:16px;margin:14px 0 26px}
-h2{color:var(--navy);font-size:24px;margin:34px 0 8px;padding-left:12px}
-h3{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin:18px 0 4px}
-.answer{background:#f6f8fc;padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
-.stat{background:#eef5ff;border:1px solid #d6e6fb;border-radius:10px;padding:10px 16px;margin:14px 0;font-weight:600;color:#0f3e7a}
-ul,ol{padding-left:22px}li{margin:7px 0}
-.subj{background:#fff;border:1px dashed #cdd6e6;border-radius:8px;padding:8px 12px;margin:6px 0;font-style:italic;color:#3a4256;font-size:15px}
-.mist{color:#9a3412;background:#fff4ed;border-left:4px solid var(--coral);padding:8px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px}
-.cta{background:var(--v2-bg);color:#fff;border-radius:16px;padding:26px;margin:36px 0;text-align:center}
-.cta a{display:inline-block;background:var(--v2-coral);color:#fff;font-weight:800;padding:13px 24px;border-radius:10px;margin-top:10px;box-shadow:0 0 28px rgba(255,90,44,.3)}
-.faq dt{font-weight:700;color:var(--navy);margin-top:16px}.faq dd{margin:4px 0 0}
-.tag{display:inline-block;background:#eef2f8;color:var(--navy);font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;margin-right:6px}
-.afoot{background:#020810;color:rgba(255,255,255,.4);text-align:center;padding:26px;font-size:14px}.afoot a{color:var(--v2-blue)}
-.backlink{display:inline-block;margin-bottom:8px;font-weight:700;font-size:14px}</style></head><body>
-<div class="top-line"></div>
-<header class="header"><div class="hin">
-<a class="logo-link" href="../../index.html"><img src="../../logo-header-white.png" alt="Ayke Solutions" onerror="this.outerHTML='<span class=&quot;logo-fallback&quot;>AYKE <b>SOLUTIONS</b></span>'"></a>
-<nav class="nav"><a href="../../index.html#services">Services</a><a href="../../index.html#ressources">Ressources</a><a href="../../blog.html" class="active">Blog</a><a href="../../index.html#a-propos">À propos</a><a href="../../index.html#contact" class="btn">Audit Gratuit</a></nav>
-</div></header>
-<article class="wrap">
-<a class="backlink" href="../../blog.html" style="color:var(--coral)">← Tous les articles</a>
-<div class="kicker" style="color:var(--coral)">PME &amp; Artisans</div>
-<h1>Un site qui transforme les visiteurs en demandes de devis</h1>
-
-<div class="meta">Par <strong>Sonia Catic</strong> · Ayke Solutions · 28 juillet 2026 · 7 min &nbsp;|&nbsp; <span class="tag">Site web</span><span class="tag">Conversion</span></div>
-<p>Beaucoup d'artisans ont un site « parce qu'il en faut un » — une jolie page qui présente l'entreprise, mais qui ne génère rien. Un site qui <strong>convertit</strong>, lui, a un seul objectif clair : transformer un visiteur en demande de devis. La différence ne tient pas au design, mais à quelques principes simples. Les voici.</p>
-<h2 id="objectif" style="border-left:4px solid var(--coral)">Un site a un seul objectif</h2>
-<div class="answer"><strong>En bref :</strong> chaque page doit pousser vers une action — « Demander un devis » ou « Appeler ». Si l'objectif n'est pas clair, le visiteur repart.</div><p>Un site « plaquette » informe ; un site qui convertit guide. Dès la première seconde, le visiteur doit comprendre ce que vous faites, où, et comment vous contacter.</p>
-<h2 id="essentiels" style="border-left:4px solid var(--coral)">Les 6 éléments essentiels</h2>
-<ul><li><strong>Un titre clair</strong> qui dit le métier + la zone (« Chauffagiste à Genève et alentours »).</li><li><strong>Le numéro cliquable</strong> sur mobile, visible en haut.</li><li><strong>Des photos de réalisations</strong> (avant/après) qui prouvent le savoir-faire.</li><li><strong>Vos avis</strong> affichés directement sur la page.</li><li><strong>Un formulaire court</strong> (4 champs maximum).</li><li><strong>Des boutons d'action</strong> répétés à chaque section.</li></ul>
-<h2 id="mobile" style="border-left:4px solid var(--coral)">Pensez mobile d'abord</h2>
-<div class="stat">📊 La majorité des recherches locales se font sur smartphone, souvent juste avant d'appeler.</div><p>Si votre site est lent ou illisible sur mobile, vous perdez des clients chaque semaine. Vérifiez : chargement rapide, numéro cliquable, formulaire simple au pouce. Le mobile n'est pas une option, c'est la norme.</p>
-<h2 id="formulaire" style="border-left:4px solid var(--coral)">Un formulaire qui ne fait pas fuir</h2>
-<p>Chaque champ supplémentaire fait chuter le taux de complétion. Demandez le minimum : nom, téléphone (ou email), et une description du besoin. Vous récolterez les détails à l'appel. Un formulaire de 4 champs convertit bien mieux qu'un questionnaire de 12.</p><div class="mist"><strong>Erreur fréquente :</strong> un site qui date de plusieurs années, lent, sans appel à l'action — il fait fuir au lieu de convertir.</div>
-<div class="cta"><div style="font-size:20px;font-weight:800">Votre site ne génère pas de demandes ?</div>
-<p style="color:#cdd6e6;margin:8px 0 0">Je l'audite gratuitement et vous indique les 3 changements qui feront décoller vos contacts.</p>
-<a href="../../index.html#contact">Demander mon audit gratuit</a></div>
-<h2 id="faq" style="border-left:4px solid var(--coral)">Questions fréquentes</h2>
-<dl class="faq"><dt>Faut-il un gros site pour générer des devis ?</dt><dd>Non. Une seule page bien construite, claire et orientée action, convertit souvent mieux qu&#x27;un grand site mal pensé.</dd><dt>Combien de champs dans le formulaire de devis ?</dt><dd>Quatre maximum : nom, téléphone ou email, et le besoin. Vous compléterez le reste lors de l&#x27;appel.</dd><dt>Mon site doit-il être refait s&#x27;il date un peu ?</dt><dd>Si il est lent, illisible sur mobile et sans appel à l&#x27;action clair, oui : ce sont des clients perdus chaque semaine.</dd><dt>Le site remplace-t-il la fiche Google ?</dt><dd>Non, ils sont complémentaires : la fiche capte la recherche locale, le site convertit le visiteur en demande de devis.</dd></dl>
-</article>
-<footer class="afoot">© 2026 Ayke Solutions · Sonia Catic · <a href="../../index.html">ayke-solutions.com</a> · <a href="mailto:contact@ayke-solutions.com">contact@ayke-solutions.com</a></footer>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Faut-il un gros site pour générer des devis ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. Une seule page bien construite, claire et orientée action, convertit souvent mieux qu'un grand site mal pensé."}}, {"@type": "Question", "name": "Combien de champs dans le formulaire de devis ?", "acceptedAnswer": {"@type": "Answer", "text": "Quatre maximum : nom, téléphone ou email, et le besoin. Vous compléterez le reste lors de l'appel."}}, {"@type": "Question", "name": "Mon site doit-il être refait s'il date un peu ?", "acceptedAnswer": {"@type": "Answer", "text": "Si il est lent, illisible sur mobile et sans appel à l'action clair, oui : ce sont des clients perdus chaque semaine."}}, {"@type": "Question", "name": "Le site remplace-t-il la fiche Google ?", "acceptedAnswer": {"@type": "Answer", "text": "Non, ils sont complémentaires : la fiche capte la recherche locale, le site convertit le visiteur en demande de devis."}}]}</script>
-</body></html>
+[
+  {
+    "slug": "generer-devis-sans-acheter-leads",
+    "pillar": "local",
+    "date": "2026-06-26",
+    "readMin": 6,
+    "emoji": "🔧",
+    "keyword": "générer des devis artisan sans leads",
+    "title": "5 façons de générer vos demandes de devis sans acheter de leads",
+    "excerpt": "Fiche Google, avis, site qui convertit, SEO local : les 5 leviers pour générer vos propres demandes — sans dépendre des plateformes payantes."
+  },
+  {
+    "slug": "flows-klaviyo-indispensables",
+    "pillar": "ecom",
+    "date": "2026-06-26",
+    "readMin": 13,
+    "emoji": "📧",
+    "keyword": "flows klaviyo shopify",
+    "title": "Les 7 flows Klaviyo indispensables pour votre boutique Shopify",
+    "excerpt": "Welcome, panier abandonné, post-achat… le guide complet pour transformer Klaviyo en machine à vendre."
+  },
+  {
+    "slug": "fiche-google-business-artisan",
+    "pillar": "local",
+    "date": "2026-07-07",
+    "readMin": 7,
+    "emoji": "📍",
+    "keyword": "fiche google business artisan",
+    "title": "Optimiser sa fiche Google Business quand on est artisan",
+    "excerpt": "Le guide étape par étape pour transformer votre fiche en générateur d'appels — catégories, photos, posts, zone d'intervention."
+  },
+  {
+    "slug": "email-abandon-panier",
+    "pillar": "ecom",
+    "date": "2026-07-09",
+    "readMin": 8,
+    "emoji": "🛒",
+    "keyword": "email abandon panier",
+    "title": "Emails d'abandon panier : récupérez +30% de ventes perdues",
+    "excerpt": "La séquence exacte (timing, nombre d'emails, copywriting) pour récupérer les paniers abandonnés sur Shopify."
+  },
+  {
+    "slug": "avis-google-clients",
+    "pillar": "local",
+    "date": "2026-07-14",
+    "readMin": 6,
+    "emoji": "⭐",
+    "keyword": "obtenir avis google",
+    "title": "Comment obtenir (vraiment) des avis Google clients",
+    "excerpt": "Le process simple pour passer de 2 à 20 avis en quelques semaines, et pourquoi répondre à tous change tout."
+  },
+  {
+    "slug": "welcome-series-klaviyo",
+    "pillar": "ecom",
+    "date": "2026-07-16",
+    "readMin": 7,
+    "emoji": "👋",
+    "keyword": "welcome series klaviyo",
+    "title": "Welcome Series : 5 emails pour convertir vos nouveaux abonnés",
+    "excerpt": "Structure, timing et copywriting d'une séquence de bienvenue qui déclenche le premier achat."
+  },
+  {
+    "slug": "seo-local-artisan",
+    "pillar": "local",
+    "date": "2026-07-21",
+    "readMin": 8,
+    "emoji": "🔎",
+    "keyword": "seo local métier ville",
+    "title": "SEO local : être trouvé sur « métier + ville »",
+    "excerpt": "Une page par service et par zone, le maillage interne et les mots-clés à forte intention pour remonter sur Google."
+  },
+  {
+    "slug": "segmentation-klaviyo",
+    "pillar": "ecom",
+    "date": "2026-07-23",
+    "readMin": 7,
+    "emoji": "🎯",
+    "keyword": "segmentation klaviyo",
+    "title": "Segmentation Klaviyo : le bon email à la bonne personne",
+    "excerpt": "Les segments qui rapportent (engagés, VIP, dormants) et comment arrêter d'envoyer à toute la liste."
+  },
+  {
+    "slug": "site-qui-convertit-pme",
+    "pillar": "local",
+    "date": "2026-07-28",
+    "readMin": 7,
+    "emoji": "🖥️",
+    "keyword": "site qui convertit PME devis",
+    "title": "Un site qui transforme les visiteurs en demandes de devis",
+    "excerpt": "Pourquoi un site « plaquette » ne sert à rien, et les 6 éléments d'une page qui génère des contacts."
+  },
+  {
+    "slug": "post-achat-fidelisation",
+    "pillar": "ecom",
+    "date": "2026-07-30",
+    "readMin": 7,
+    "emoji": "🔁",
+    "keyword": "email post-achat fidélisation",
+    "title": "Email post-achat : transformer un acheteur en client fidèle",
+    "excerpt": "La séquence post-achat qui augmente le repeat purchase et les avis produits, sans budget pub."
+  },
+  {
+    "slug": "installateur-pac-solaire-clients",
+    "pillar": "local",
+    "date": "2026-08-04",
+    "readMin": 8,
+    "emoji": "☀️",
+    "keyword": "clients installateur pompe à chaleur solaire",
+    "title": "Installateur PAC / solaire : capter la demande dopée par les aides",
+    "excerpt": "MaPrimeRénov', subventions : comment être trouvé et rassurant au bon moment, avec un petit budget."
+  },
+  {
+    "slug": "popup-capture-emails",
+    "pillar": "ecom",
+    "date": "2026-08-06",
+    "readMin": 6,
+    "emoji": "✉️",
+    "keyword": "popup capture email ecommerce",
+    "title": "Pop-up de capture : doubler sa liste email sans agacer",
+    "excerpt": "Le bon déclencheur, la bonne offre et le bon timing pour collecter des emails qui achètent."
+  },
+  {
+    "slug": "google-ads-petit-budget-pme",
+    "pillar": "local",
+    "date": "2026-08-11",
+    "readMin": 8,
+    "emoji": "💸",
+    "keyword": "google ads petit budget PME",
+    "title": "Google Ads pour PME : générer des devis avec 200 CHF/mois",
+    "excerpt": "Comment cibler les recherches à forte intention près de chez vous sans gaspiller un centime."
+  },
+  {
+    "slug": "deliverabilite-email",
+    "pillar": "ecom",
+    "date": "2026-08-13",
+    "readMin": 7,
+    "emoji": "📬",
+    "keyword": "délivrabilité email spam",
+    "title": "Délivrabilité : arrêter de finir dans les spams",
+    "excerpt": "SPF, DKIM, DMARC, réputation d'expéditeur : ce qu'il faut régler pour que vos emails arrivent."
+  },
+  {
+    "slug": "linkedin-artisan-b2b",
+    "pillar": "local",
+    "date": "2026-08-18",
+    "readMin": 6,
+    "emoji": "💼",
+    "keyword": "linkedin artisan bâtiment B2B",
+    "title": "LinkedIn pour artisans et PME du bâtiment",
+    "excerpt": "Comment décrocher des chantiers B2B et des partenariats sans y passer ses journées."
+  },
+  {
+    "slug": "calendrier-promo-ecommerce",
+    "pillar": "ecom",
+    "date": "2026-08-20",
+    "readMin": 7,
+    "emoji": "📆",
+    "keyword": "calendrier promo ecommerce",
+    "title": "Calendrier promo e-commerce : planifier ses campagnes",
+    "excerpt": "Le plan d'attaque des temps forts (rentrée, Black Friday, fêtes) pour ne plus improviser ses emails."
+  },
+  {
+    "slug": "relance-devis-automatique",
+    "pillar": "local",
+    "date": "2026-08-25",
+    "readMin": 6,
+    "emoji": "⏱️",
+    "keyword": "relance devis automatique",
+    "title": "Relancer ses devis automatiquement (et signer plus)",
+    "excerpt": "Les relances simples (email/SMS) qui transforment un devis sans réponse en chantier signé."
+  },
+  {
+    "slug": "kpi-email-marketing",
+    "pillar": "ecom",
+    "date": "2026-08-27",
+    "readMin": 6,
+    "emoji": "📊",
+    "keyword": "kpi email marketing",
+    "title": "Les 5 KPIs email marketing à suivre vraiment",
+    "excerpt": "Taux d'ouverture, clic, conversion, désabonnement, CA email : lesquels regarder et quoi en faire."
+  },
+  {
+    "slug": "reputation-en-ligne-pme",
+    "pillar": "local",
+    "date": "2026-09-01",
+    "readMin": 7,
+    "emoji": "🛡️",
+    "keyword": "réputation en ligne PME",
+    "title": "Gérer sa réputation en ligne quand on est une petite entreprise",
+    "excerpt": "Avis, mentions, e-réputation : la routine légère pour protéger et renforcer votre image locale."
+  },
+  {
+    "slug": "ab-test-email-klaviyo",
+    "pillar": "ecom",
+    "date": "2026-09-03",
+    "readMin": 7,
+    "emoji": "🧪",
+    "keyword": "a/b test email klaviyo",
+    "title": "A/B testing email : tester pour vendre plus (sans se compliquer)",
+    "excerpt": "Objet, visuel, CTA, horaire d'envoi : quoi tester, comment lire les résultats, et les erreurs qui faussent tout."
+  }
+]

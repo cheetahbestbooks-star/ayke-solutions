@@ -3,11 +3,11 @@
 const fs = require("fs");
 const path = require("path");
 const ROOT = __dirname;
-const posts = JSON.parse(fs.readFileSync(path.join(ROOT, "blog", "posts.json"), "utf8"));
+const posts = JSON.parse(fs.readFileSync(path.join(ROOT, "posts.json"), "utf8"));
 const today = new Date(); today.setHours(23,59,59,999);
 const live = posts
   .filter(p => new Date(p.date) <= today)
-  .filter(p => fs.existsSync(path.join(ROOT, "blog", "posts", p.slug + ".html")))
+  .filter(p => fs.existsSync(path.join(ROOT, p.slug + ".html")))
   .sort((a,b) => new Date(b.date) - new Date(a.date));
 const fmt = d => new Date(d).toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"});
 const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
@@ -15,8 +15,8 @@ function card(p){
   const bg = p.pillar==="local" ? "rgba(255,90,44,0.10)" : "rgba(14,165,233,0.10)";
   const tagcls = p.pillar==="local" ? "tag-local" : "tag-ecom";
   const tagtxt = p.pillar==="local" ? "PME &amp; Local" : "E-commerce";
-  return `      <a class="post-card ${p.pillar}" href="blog/posts/${p.slug}.html">
-        <div class="post-top"><img src="blog/thumbs/${p.slug}.png" alt="${esc(p.title)}" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='${p.emoji}'"></div>
+  return `      <a class="post-card ${p.pillar}" href="${p.slug}.html">
+        <div class="post-top"><img src="${p.slug}.png" alt="${esc(p.title)}" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='${p.emoji}'"></div>
         <div class="post-body">
           <p>${esc(p.excerpt)}</p>
           <div class="post-meta">📅 ${fmt(p.date)} · ⏱️ ${p.readMin} min</div>
