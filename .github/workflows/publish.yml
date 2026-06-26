@@ -5,9 +5,17 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - name: Recuperer le depot
         uses: actions/checkout@v4
@@ -17,7 +25,7 @@ jobs:
           node-version: "20"
       - name: Regenerer blog.html
         run: node build-blog.js
-      - name: Committer si blog.html a change
+      - name: Committer blog.html si change
         run: |
           git config user.name "Ayke Blog Bot"
           git config user.email "actions@github.com"
@@ -28,3 +36,12 @@ jobs:
           else
             echo "Rien de nouveau a publier aujourd hui."
           fi
+      - name: Configurer Pages
+        uses: actions/configure-pages@v5
+      - name: Uploader le site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+      - name: Deployer le site
+        id: deploy
+        uses: actions/deploy-pages@v4
