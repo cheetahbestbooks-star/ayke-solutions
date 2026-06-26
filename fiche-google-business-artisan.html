@@ -1,0 +1,69 @@
+<!doctype html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Délivrabilité : arrêter de finir dans les spams | Ayke Solutions</title>
+<meta name="description" content="SPF, DKIM, DMARC, réputation d&#x27;expéditeur, nettoyage de liste : ce qu&#x27;il faut régler pour que vos emails arrivent vraiment en boîte de réception.">
+<meta name="keywords" content="délivrabilité email spam">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ayke-solutions.com/blog/posts/deliverabilite-email.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Délivrabilité : arrêter de finir dans les spams">
+<meta property="og:image" content="https://ayke-solutions.com/blog/thumbs/deliverabilite-email.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<style>:root{--navy:#1a2744;--coral:#e8845c;--blue:#1565C0;--v2-bg:#030c1a;--v2-coral:#ff5a2c;--v2-blue:#0ea5e9}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;color:#1e2432;background:#fff;line-height:1.78;font-size:17px}
+a{color:inherit;text-decoration:none}
+.top-line{position:fixed;top:0;left:0;right:0;height:3px;z-index:1001;background:linear-gradient(90deg,var(--v2-coral),var(--v2-blue),#00ffd4,var(--v2-coral));background-size:300% 100%;animation:gl 4s linear infinite}
+@keyframes gl{0%{background-position:0 0}100%{background-position:300% 0}}
+.header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 0;background:rgba(3,12,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
+.hin{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.logo-link{display:flex;align-items:center}.logo-link img{height:46px;width:auto;display:block}
+.logo-fallback{font-family:"Oswald",sans-serif;font-size:1.2rem;font-weight:700;color:#fff}.logo-fallback b{color:var(--v2-coral)}
+.nav{display:flex;gap:26px;align-items:center}.nav a{color:rgba(255,255,255,.78);font-size:.88rem;font-weight:500}.nav a.active,.nav a:hover{color:#fff}
+.nav .btn{background:linear-gradient(135deg,#e8845c,#d6734b);color:#fff;padding:10px 18px;border-radius:8px;font-weight:600;font-size:.82rem}
+.wrap{max-width:740px;margin:0 auto;padding:120px 22px 40px}
+.kicker{font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase}
+h1{color:var(--navy);font-size:clamp(28px,4.5vw,38px);line-height:1.15;margin:10px 0 8px}
+.lead{font-size:19px;color:#5b6472}
+.meta{font-size:14px;color:#8a93a3;border-bottom:2px solid #eef1f6;padding-bottom:16px;margin:14px 0 26px}
+h2{color:var(--navy);font-size:24px;margin:34px 0 8px;padding-left:12px}
+h3{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;margin:18px 0 4px}
+.answer{background:#f6f8fc;padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+.stat{background:#eef5ff;border:1px solid #d6e6fb;border-radius:10px;padding:10px 16px;margin:14px 0;font-weight:600;color:#0f3e7a}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.subj{background:#fff;border:1px dashed #cdd6e6;border-radius:8px;padding:8px 12px;margin:6px 0;font-style:italic;color:#3a4256;font-size:15px}
+.mist{color:#9a3412;background:#fff4ed;border-left:4px solid var(--coral);padding:8px 14px;border-radius:0 8px 8px 0;margin:10px 0;font-size:15px}
+.cta{background:var(--v2-bg);color:#fff;border-radius:16px;padding:26px;margin:36px 0;text-align:center}
+.cta a{display:inline-block;background:var(--v2-coral);color:#fff;font-weight:800;padding:13px 24px;border-radius:10px;margin-top:10px;box-shadow:0 0 28px rgba(255,90,44,.3)}
+.faq dt{font-weight:700;color:var(--navy);margin-top:16px}.faq dd{margin:4px 0 0}
+.tag{display:inline-block;background:#eef2f8;color:var(--navy);font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;margin-right:6px}
+.afoot{background:#020810;color:rgba(255,255,255,.4);text-align:center;padding:26px;font-size:14px}.afoot a{color:var(--v2-blue)}
+.backlink{display:inline-block;margin-bottom:8px;font-weight:700;font-size:14px}</style></head><body>
+<div class="top-line"></div>
+<header class="header"><div class="hin">
+<a class="logo-link" href="../../index.html"><img src="../../logo-header-white.png" alt="Ayke Solutions" onerror="this.outerHTML='<span class=&quot;logo-fallback&quot;>AYKE <b>SOLUTIONS</b></span>'"></a>
+<nav class="nav"><a href="../../index.html#services">Services</a><a href="../../index.html#ressources">Ressources</a><a href="../../blog.html" class="active">Blog</a><a href="../../index.html#a-propos">À propos</a><a href="../../index.html#contact" class="btn">Audit Gratuit</a></nav>
+</div></header>
+<article class="wrap">
+<a class="backlink" href="../../blog.html" style="color:var(--blue)">← Tous les articles</a>
+<div class="kicker" style="color:var(--blue)">E-commerce &amp; Klaviyo</div>
+<h1>Délivrabilité email : arrêter de finir dans les spams</h1>
+
+<div class="meta">Par <strong>Sonia Catic</strong> · Ayke Solutions · 13 août 2026 · 7 min &nbsp;|&nbsp; <span class="tag">Email</span><span class="tag">Délivrabilité</span></div>
+<p>Vous pouvez écrire les plus beaux emails : s'ils finissent en spam, ils ne servent à rien. La délivrabilité — la capacité de vos emails à atteindre la boîte de réception — est le socle invisible de tout l'email marketing. Bonne nouvelle : elle se pilote. Voici les leviers, du plus technique au plus comportemental.</p>
+<h2 id="authentification" style="border-left:4px solid var(--blue)">Authentifiez votre domaine (SPF, DKIM, DMARC)</h2>
+<div class="answer"><strong>En bref :</strong> ces trois réglages prouvent aux fournisseurs (Gmail, Outlook) que vous êtes un expéditeur légitime. Sans eux, vous partez perdant.</div><p>SPF et DKIM authentifient vos envois, DMARC définit la politique en cas d'usurpation. C'est une configuration technique unique, à faire une fois, qui conditionne tout le reste.</p>
+<h2 id="reputation" style="border-left:4px solid var(--blue)">Soignez votre réputation d'expéditeur</h2>
+<div class="stat">📊 Les fournisseurs jugent votre réputation sur l'engagement : ouvertures, clics, plaintes spam, désinscriptions.</div><p>Trop d'envois à des inactifs, trop de plaintes, et votre réputation chute — vos emails basculent en spam, même pour vos bons clients. L'engagement est la monnaie de la délivrabilité.</p>
+<h2 id="nettoyage" style="border-left:4px solid var(--blue)">Nettoyez votre liste régulièrement</h2>
+<p>Une liste pleine d'adresses mortes ou inactives plombe vos statistiques. Tentez une réactivation des dormants, puis retirez ceux qui n'ouvrent plus. Une liste plus petite mais engagée délivre mieux et coûte moins cher.</p>
+<h2 id="contenu" style="border-left:4px solid var(--blue)">Évitez les pièges de contenu</h2>
+<div class="mist"><strong>À éviter :</strong> objets tout en majuscules, excès de « GRATUIT » et de points d'exclamation, images sans texte, liens douteux.</div><p>Un email équilibré (texte/visuel), avec un lien de désinscription clair et un expéditeur reconnaissable, rassure les filtres comme les humains.</p>
+<div class="cta"><div style="font-size:20px;font-weight:800">Vos emails finissent en spam ?</div>
+<p style="color:#cdd6e6;margin:8px 0 0">Je vérifie votre configuration (SPF/DKIM/DMARC) et votre réputation, et vous donne les correctifs prioritaires.</p>
+<a href="../../index.html#contact">Demander mon audit Klaviyo</a></div>
+<h2 id="faq" style="border-left:4px solid var(--blue)">Questions fréquentes</h2>
+<dl class="faq"><dt>Qu&#x27;est-ce qui fait tomber un email en spam ?</dt><dd>Un manque d&#x27;authentification (SPF/DKIM/DMARC), une mauvaise réputation d&#x27;expéditeur, l&#x27;envoi à des inactifs et un contenu trop « promo ».</dd><dt>SPF, DKIM et DMARC, c&#x27;est compliqué à mettre en place ?</dt><dd>C&#x27;est une configuration technique à faire une seule fois sur votre domaine. Une fois en place, elle protège tous vos envois.</dd><dt>Faut-il vraiment supprimer des abonnés ?</dt><dd>Oui, après une tentative de réactivation : garder des inactifs nuit à votre réputation et donc à la délivrabilité de toute votre liste.</dd><dt>Comment savoir si j&#x27;ai un problème de délivrabilité ?</dt><dd>Des taux d&#x27;ouverture en baisse, des emails signalés en spam ou non reçus par certains clients sont des signaux d&#x27;alerte à auditer.</dd></dl>
+</article>
+<footer class="afoot">© 2026 Ayke Solutions · Sonia Catic · <a href="../../index.html">ayke-solutions.com</a> · <a href="mailto:contact@ayke-solutions.com">contact@ayke-solutions.com</a></footer>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu'est-ce qui fait tomber un email en spam ?", "acceptedAnswer": {"@type": "Answer", "text": "Un manque d'authentification (SPF/DKIM/DMARC), une mauvaise réputation d'expéditeur, l'envoi à des inactifs et un contenu trop « promo »."}}, {"@type": "Question", "name": "SPF, DKIM et DMARC, c'est compliqué à mettre en place ?", "acceptedAnswer": {"@type": "Answer", "text": "C'est une configuration technique à faire une seule fois sur votre domaine. Une fois en place, elle protège tous vos envois."}}, {"@type": "Question", "name": "Faut-il vraiment supprimer des abonnés ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, après une tentative de réactivation : garder des inactifs nuit à votre réputation et donc à la délivrabilité de toute votre liste."}}, {"@type": "Question", "name": "Comment savoir si j'ai un problème de délivrabilité ?", "acceptedAnswer": {"@type": "Answer", "text": "Des taux d'ouverture en baisse, des emails signalés en spam ou non reçus par certains clients sont des signaux d'alerte à auditer."}}]}</script>
+</body></html>

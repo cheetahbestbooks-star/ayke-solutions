@@ -1,4 +1,32 @@
-<!doctype html>
+/* build-blog.js — génère blog.html à partir de posts.json
+   Ne publie un article que si : sa date <= aujourd'hui ET son fichier existe. */
+const fs = require("fs");
+const path = require("path");
+const ROOT = __dirname;
+const posts = JSON.parse(fs.readFileSync(path.join(ROOT, "blog", "posts.json"), "utf8"));
+const today = new Date(); today.setHours(23,59,59,999);
+const live = posts
+  .filter(p => new Date(p.date) <= today)
+  .filter(p => fs.existsSync(path.join(ROOT, "blog", "posts", p.slug + ".html")))
+  .sort((a,b) => new Date(b.date) - new Date(a.date));
+const fmt = d => new Date(d).toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"});
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+function card(p){
+  const bg = p.pillar==="local" ? "rgba(255,90,44,0.10)" : "rgba(14,165,233,0.10)";
+  const tagcls = p.pillar==="local" ? "tag-local" : "tag-ecom";
+  const tagtxt = p.pillar==="local" ? "PME &amp; Local" : "E-commerce";
+  return `      <a class="post-card ${p.pillar}" href="blog/posts/${p.slug}.html">
+        <div class="post-top"><img src="blog/thumbs/${p.slug}.png" alt="${esc(p.title)}" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='${p.emoji}'"></div>
+        <div class="post-body">
+          <p>${esc(p.excerpt)}</p>
+          <div class="post-meta">📅 ${fmt(p.date)} · ⏱️ ${p.readMin} min</div>
+        </div>
+      </a>`;
+}
+const localCards = live.filter(p=>p.pillar==="local").map(card).join("\n") || `      <div class="post-empty">Premiers articles très bientôt…</div>`;
+const ecomCards = live.filter(p=>p.pillar==="ecom").map(card).join("\n") || `      <div class="post-empty">Premiers articles très bientôt…</div>`;
+
+const html = `<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
@@ -96,14 +124,14 @@ a{text-decoration:none;color:inherit}
     <div class="pillar-title"><span class="dot dot-local"></span> PME &amp; Visibilité locale</div>
     <div class="pillar-sub">Pour les artisans, installateurs et PME qui veulent générer leurs propres demandes de devis.</div>
     <div class="grid">
-      <div class="post-empty">Premiers articles très bientôt…</div>
+${localCards}
     </div>
   </section>
   <section class="pillar" data-pillar="ecom">
     <div class="pillar-title"><span class="dot dot-ecom"></span> E-commerce &amp; Klaviyo</div>
     <div class="pillar-sub">Pour les marques Shopify qui veulent vendre plus grâce à l'email.</div>
     <div class="grid">
-      <div class="post-empty">Premiers articles très bientôt…</div>
+${ecomCards}
     </div>
   </section>
   <section class="news">
@@ -113,7 +141,7 @@ a{text-decoration:none;color:inherit}
   </section>
 </div>
 <footer class="footer"><div class="container">
-  © 2026 Ayke Solutions · Sonia Catic · Marketing digital PME &amp; E-commerce · Suisse / France · <a href="mailto:contact@ayke-solutions.com">contact@ayke-solutions.com</a>
+  © ${new Date().getFullYear()} Ayke Solutions · Sonia Catic · Marketing digital PME &amp; E-commerce · Suisse / France · <a href="mailto:contact@ayke-solutions.com">contact@ayke-solutions.com</a>
 </div></footer>
 <script>
 const pills=document.querySelectorAll('.pill');const sections=document.querySelectorAll('.pillar');
@@ -122,3 +150,6 @@ pills.forEach(p=>p.addEventListener('click',()=>{pills.forEach(x=>x.classList.re
 </script>
 </body>
 </html>
+`;
+fs.writeFileSync(path.join(ROOT, "blog.html"), html);
+console.log("blog.html généré — " + live.length + " article(s) en ligne sur " + posts.length + " planifié(s).");
