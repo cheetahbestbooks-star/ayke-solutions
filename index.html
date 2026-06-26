@@ -2938,7 +2938,7 @@
     <script>
     // Force scroll to top on page load
     if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
-    window.addEventListener('load', function() { window.scrollTo(0, 0); });
+    window.addEventListener('load', function() { if (!location.hash) window.scrollTo(0, 0); });
     </script>
 </head>
 <body>
