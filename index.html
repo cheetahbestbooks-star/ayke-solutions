@@ -4871,7 +4871,15 @@
 <button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
-
+<script>
+/* Recale sur l'ancre (#contact, #services...) apres chargement complet */
+window.addEventListener('load', function () {
+  if (location.hash) {
+    var cible = document.querySelector(location.hash);
+    if (cible) setTimeout(function () { cible.scrollIntoView(); }, 350);
+  }
+});
+</script>
 </body>
 </html>
                                                                                                                                                                                                                                                                                                                                                                               
