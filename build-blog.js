@@ -16,7 +16,7 @@ function card(p){
   const tagcls = p.pillar==="local" ? "tag-local" : "tag-ecom";
   const tagtxt = p.pillar==="local" ? "PME &amp; Local" : "E-commerce";
   return `      <a class="post-card ${p.pillar}" href="${p.slug}.html">
-        <div class="post-top"><img src="${p.slug}.png" alt="${esc(p.title)}" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='${p.emoji}'"></div>
+        <div class="post-top"><img src="${p.slug}.png?v=3" alt="${esc(p.title)}" loading="lazy" onerror="this.parentElement.style.fontSize='42px';this.parentElement.textContent='${p.emoji}'"></div>
         <div class="post-body">
           <p>${esc(p.excerpt)}</p>
           <div class="post-meta">📅 ${fmt(p.date)} · ⏱️ ${p.readMin} min</div>
@@ -145,11 +145,32 @@ ${ecomCards}
 </div></footer>
 <script>
 const pills=document.querySelectorAll('.pill');const sections=document.querySelectorAll('.pillar');
-pills.forEach(p=>p.addEventListener('click',()=>{pills.forEach(x=>x.classList.remove('active'));p.classList.add('active');
-  const f=p.dataset.f;sections.forEach(s=>{s.style.display=(f==='all'||s.dataset.pillar===f)?'block':'none';});}));
+pills.forEach(p=>p.addEventListener('click',()=>{
+  pills.forEach(x=>{x.classList.remove('active');x.style.background='';x.style.borderColor='';});
+  p.classList.add('active');
+  const f=p.dataset.f;
+  const col=(f==='ecom')?'var(--v2-blue)':'var(--v2-coral)';
+  p.style.background=col;p.style.borderColor=col;
+  sections.forEach(s=>{s.style.display=(f==='all'||s.dataset.pillar===f)?'block':'none';});
+}));
 </script>
 </body>
 </html>
 `;
 fs.writeFileSync(path.join(ROOT, "blog.html"), html);
 console.log("blog.html généré — " + live.length + " article(s) en ligne sur " + posts.length + " planifié(s).");
+
+// ---- sitemap.xml (auto : homepage + blog + pages publiées) ----
+const todayISO = new Date().toISOString().slice(0,10);
+const urls = [
+  {loc:"https://ayke-solutions.com/", pri:"1.0", lastmod:todayISO},
+  {loc:"https://ayke-solutions.com/blog.html", pri:"0.8", lastmod:todayISO},
+  {loc:"https://ayke-solutions.com/mentions-legales.html", pri:"0.3", lastmod:todayISO},
+];
+live.forEach(p => urls.push({loc:"https://ayke-solutions.com/"+p.slug+".html", pri:"0.7", lastmod:p.date}));
+const sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+  + urls.map(u=>'  <url><loc>'+u.loc+'</loc><lastmod>'+u.lastmod+'</lastmod><priority>'+u.pri+'</priority></url>').join("\n")
+  + '\n</urlset>\n';
+fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sm);
+console.log("sitemap.xml généré — " + urls.length + " URLs.");
+

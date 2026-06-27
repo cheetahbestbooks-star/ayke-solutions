@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ayke-solutions.com/</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ayke-solutions.com/mentions-legales.html</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <url><loc>https://ayke-solutions.com/</loc><lastmod>2026-06-27</lastmod><priority>1.0</priority></url>
+  <url><loc>https://ayke-solutions.com/blog.html</loc><lastmod>2026-06-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://ayke-solutions.com/mentions-legales.html</loc><lastmod>2026-06-27</lastmod><priority>0.3</priority></url>
+  <url><loc>https://ayke-solutions.com/welcome-series-klaviyo.html</loc><lastmod>2026-06-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ayke-solutions.com/avis-google-clients.html</loc><lastmod>2026-06-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ayke-solutions.com/email-abandon-panier.html</loc><lastmod>2026-06-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ayke-solutions.com/fiche-google-business-artisan.html</loc><lastmod>2026-06-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ayke-solutions.com/flows-klaviyo-indispensables.html</loc><lastmod>2026-06-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://ayke-solutions.com/generer-devis-sans-acheter-leads.html</loc><lastmod>2026-06-19</lastmod><priority>0.7</priority></url>
 </urlset>
