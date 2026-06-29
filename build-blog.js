@@ -168,6 +168,11 @@ const urls = [
   {loc:"https://ayke-solutions.com/mentions-legales.html", pri:"0.3", lastmod:todayISO},
 ];
 live.forEach(p => urls.push({loc:"https://ayke-solutions.com/"+p.slug+".html", pri:"0.7", lastmod:p.date}));
+// Pages locales (zones desservies) — incluses si le fichier existe a la racine
+["marketing-digital-geneve","marketing-digital-haute-savoie","marketing-digital-vaud","marketing-digital-valais"].forEach(slug => {
+  if (fs.existsSync(path.join(ROOT, slug + ".html"))) urls.push({loc:"https://ayke-solutions.com/"+slug+".html", pri:"0.8", lastmod:todayISO});
+});
+
 const sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
   + urls.map(u=>'  <url><loc>'+u.loc+'</loc><lastmod>'+u.lastmod+'</lastmod><priority>'+u.pri+'</priority></url>').join("\n")
   + '\n</urlset>\n';
