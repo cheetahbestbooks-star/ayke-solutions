@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace membres — Ayke Solutions</title>
+<meta name="description" content="Créez votre compte gratuit Ayke Solutions : ressources exclusives + communauté Discord pour entrepreneurs. Zéro spam, que du concret.">
+<link rel="canonical" href="https://ayke-solutions.com/membres.html">
+<meta name="robots" content="noindex,follow">
+<meta property="og:title" content="Espace membres — Ayke Solutions">
+<meta property="og:description" content="Ressources exclusives + communauté Discord. Créez votre compte gratuit en 30 secondes.">
+<meta property="og:image" content="https://ayke-solutions.com/logo-header-white.png">
+<meta property="og:url" content="https://ayke-solutions.com/membres.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;background:#030c1a;color:#0f172a}
+a{text-decoration:none}
+/* ===== HEADER ===== */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(3,12,26,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+.hdr-in{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.hdr-in img{height:34px;width:auto;display:block}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{color:rgba(255,255,255,.72);font-size:.92rem;font-weight:500;transition:color .15s}
+.nav a:hover{color:#fff}
+.nav .cta{background:#ff5a2c;color:#fff;padding:9px 18px;border-radius:8px;font-weight:700}
+.nav .cta:hover{color:#fff;transform:translateY(-1px)}
+.burger{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
+@media(max-width:880px){.nav{display:none}.burger{display:block}}
+/* ===== HERO ===== */
+.hero{padding:130px 24px 60px;background:radial-gradient(circle at 70% 0%,rgba(21,101,192,.18),transparent 55%),radial-gradient(circle at 0% 90%,rgba(255,90,44,.12),transparent 50%),#030c1a}
+.hero-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.kicker{display:inline-block;color:#0ea5e9;font-weight:800;letter-spacing:2px;font-size:12px;text-transform:uppercase;margin-bottom:14px}
+.bigtitle{font-family:'Anton',sans-serif;text-transform:uppercase;line-height:.95;margin-bottom:24px;letter-spacing:1px}
+.bigtitle span{display:block;white-space:nowrap}
+.bigtitle .l1{color:#fff;font-size:clamp(2rem,4.6vw,3.4rem)}
+.bigtitle .l2{color:#ff5a2c;font-size:clamp(2.2rem,5vw,3.7rem)}
+.bigtitle .l3{font-size:clamp(2rem,4.6vw,3.4rem);color:transparent;-webkit-text-stroke:1.6px #ff5a2c}
+.bigtitle .rk{-webkit-text-stroke:0;color:#fff;font-size:.55em;vertical-align:middle;margin-left:.18em}
+.hero .lead{color:rgba(255,255,255,.65);font-size:1.08rem;line-height:1.65;margin-bottom:26px;max-width:520px}
+.benefits{list-style:none;display:flex;flex-direction:column;gap:14px}
+.benefits li{display:flex;gap:12px;align-items:flex-start;color:rgba(255,255,255,.85);font-size:1rem;line-height:1.5}
+.benefits .bi{flex-shrink:0;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.benefits b{color:#fff}
+/* ===== FORM CARD ===== */
+.card{background:#fff;border-radius:18px;padding:32px;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.card h2{font-size:1.4rem;font-weight:800;color:#0f172a;margin-bottom:4px}
+.card .sub{color:#64748b;font-size:.92rem;margin-bottom:22px;line-height:1.5}
+.fld{margin-bottom:15px}
+.fld label{display:block;font-weight:700;font-size:.86rem;color:#1e293b;margin-bottom:6px}
+.fld input{width:100%;padding:12px 14px;border:1.5px solid #e2e8f0;border-radius:9px;font-size:.97rem;font-family:inherit;transition:border-color .15s;background:#f8fafc}
+.fld input:focus{outline:none;border-color:#1e88e5;background:#fff}
+.fld .hint{display:block;font-size:.76rem;color:#94a3b8;margin-top:5px}
+.consent{display:flex;gap:8px;align-items:flex-start;font-size:.76rem;color:#64748b;margin:6px 0 18px;line-height:1.45}
+.consent a{color:#1e88e5;text-decoration:underline}
+.consent input{margin-top:2px;flex-shrink:0}
+.submit{width:100%;padding:14px;border:none;border-radius:10px;background:#ff5a2c;color:#fff;font-weight:800;font-size:1rem;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px rgba(255,90,44,.35);transition:transform .15s}
+.submit:hover{transform:translateY(-2px)}
+.privacy{text-align:center;font-size:.74rem;color:#94a3b8;margin-top:12px}
+/* ===== SUCCESS STATE ===== */
+.success{display:none;text-align:center;padding:14px 6px}
+.success .big{font-size:48px;margin-bottom:10px}
+.success h2{font-size:1.5rem;color:#0f172a;margin-bottom:8px}
+.success p{color:#64748b;font-size:.96rem;line-height:1.55;margin-bottom:22px}
+.discord-btn{display:inline-flex;align-items:center;gap:10px;background:#5865F2;color:#fff;font-weight:800;font-size:1rem;padding:14px 26px;border-radius:10px;box-shadow:0 8px 22px rgba(88,101,242,.4);transition:transform .15s}
+.discord-btn:hover{color:#fff;transform:translateY(-2px)}
+.res-link{display:block;margin-top:18px;color:#1e88e5;font-weight:600;font-size:.92rem}
+/* ===== COMMUNITY STRIP ===== */
+.strip{background:#0a1525;padding:60px 24px;border-top:1px solid rgba(255,255,255,.06)}
+.strip-in{max-width:760px;margin:0 auto;text-align:center}
+.strip h3{color:#fff;font-size:1.7rem;font-weight:800;margin-bottom:12px}
+.strip p{color:rgba(255,255,255,.6);font-size:1.02rem;line-height:1.6;margin-bottom:26px}
+/* ===== FOOTER ===== */
+.ft{background:#030c1a;padding:34px 24px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+.ft img{height:30px;margin-bottom:14px}
+.ft p{color:rgba(255,255,255,.4);font-size:.84rem;line-height:1.7}
+.ft a{color:rgba(255,255,255,.6)}
+@media(max-width:880px){.hero-in{grid-template-columns:1fr;gap:34px}.hero{padding-top:100px}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-in">
+    <a href="index.html"><img src="logo-header-white.png" alt="Ayke Solutions"></a>
+    <nav class="nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#resultats">Résultats</a>
+      <a href="index.html#ressources">Ressources</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#apropos">À propos</a>
+      <a class="cta" href="index.html#contact">Audit Gratuit</a>
+    </nav>
+    <button class="burger" onclick="document.querySelector('.nav').style.display='flex'">☰</button>
+  </div>
+</header>
+
+<!-- HERO + FORM -->
+<section class="hero">
+  <div class="hero-in">
+    <div>
+      <span class="kicker">Espace membres · gratuit</span>
+      <h1 class="bigtitle">
+        <span class="l1">Rejoignez</span>
+        <span class="l2">la communauté</span>
+        <span class="l3">Ayke<span class="rk">🚀</span></span>
+      </h1>
+      <p class="lead">Créez votre compte gratuit en 30 secondes. Vous accédez aux ressources exclusives et à une communauté Discord d'entrepreneurs qui s'entraident. Zéro spam, que du concret.</p>
+      <ul class="benefits">
+        <li><span class="bi" style="background:rgba(232,132,92,.18)">📚</span><span><b>Ressources exclusives</b> — guides, checklists et templates téléchargeables, réservés aux membres.</span></li>
+        <li><span class="bi" style="background:rgba(88,101,242,.2)">💬</span><span><b>Communauté Discord</b> — échangez avec d'autres PME et e-commerçants, posez vos questions.</span></li>
+        <li><span class="bi" style="background:rgba(21,101,192,.18)">💡</span><span><b>Conseils acquisition</b> — les meilleures astuces visibilité &amp; emailing, en avant-première.</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <!-- FORM -->
+      <form id="aykeForm" method="POST"
+            action="https://cab6c555.sibforms.com/serve/MUIFAOxAeIjoEpQUX8mElg3r-Um6lCs0I0fvuX42DPI_pUVSvWEvcR-FaiwnW12Uds0aBuXu-znj_15fiavTj_yCN4uBrXED-BHXVpG6DkS4K73wLS8C9SxACoRgfivIujU2w_JARhdlazB2tqcMMsk2oQlSQjZMLtShB87np_IaqOjbUUZl3b27re39pMmSzL-0IiTgufzeU6UiBw=="
+            target="ayke_iframe" onsubmit="aykeJoin();return true;">
+        <h2>Créez votre compte gratuit</h2>
+        <p class="sub">30 secondes, et vous êtes dans la team. 🎉</p>
+
+        <div class="fld">
+          <label for="PSEUDO">Pseudo</label>
+          <input type="text" id="PSEUDO" name="PSEUDO" maxlength="200" placeholder="Votre pseudo" required>
+          <span class="hint">Votre nom dans la communauté</span>
+        </div>
+        <div class="fld">
+          <label for="PRENOM">Prénom</label>
+          <input type="text" id="PRENOM" name="PRENOM" maxlength="200" placeholder="Votre prénom" required>
+          <span class="hint">Pour qu'on se dise bonjour comme il faut 👋</span>
+        </div>
+        <div class="fld">
+          <label for="NOM">Nom</label>
+          <input type="text" id="NOM" name="NOM" maxlength="200" placeholder="Votre nom" required>
+          <span class="hint">Promis, on ne vous appellera pas comme à l'école 😅</span>
+        </div>
+        <div class="fld">
+          <label for="EMAIL">Email</label>
+          <input type="email" id="EMAIL" name="EMAIL" placeholder="vous@email.com" required>
+          <span class="hint">Promis, zéro spam — juste des conseils utiles.</span>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" required>
+          <span>J'accepte de recevoir les emails &amp; ressources d'Ayke Solutions et de rejoindre la communauté (<a href="mentions-legales.html#confidentialite">confidentialité</a>).</span>
+        </label>
+
+        <!-- honeypot + Brevo hidden fields -->
+        <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="locale" value="fr">
+        <input type="hidden" name="html_type" value="simple">
+
+        <button class="submit" type="submit">JE REJOINS LA TEAM 🎉</button>
+        <p class="privacy">Désinscription en 1 clic. Vos données restent chez nous.</p>
+      </form>
+
+      <!-- SUCCESS -->
+      <div class="success" id="aykeSuccess">
+        <div class="big">🎉</div>
+        <h2>Bienvenue dans la team !</h2>
+        <p>Votre compte est créé. Un email de bienvenue arrive dans votre boîte. Dernière étape : rejoignez la communauté 👇</p>
+        <a class="discord-btn" id="discordBtn" href="https://discord.gg/9cJgz4UwF6" target="_blank" rel="noopener">💬 Rejoindre le Discord</a>
+        <a class="res-link" href="blog.html">📚 En attendant, lisez le blog →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY STRIP -->
+<section class="strip">
+  <div class="strip-in">
+    <h3>Une communauté, pas une newsletter de plus 💬</h3>
+    <p>Sur le Discord Ayke, on partage les bons plans, on s'entraide sur la visibilité locale et l'e-commerce, et on garde le contact. Rejoignez-nous gratuitement.</p>
+    <a class="discord-btn" href="https://discord.gg/9cJgz4UwF6" target="_blank" rel="noopener">💬 Rejoindre le Discord</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+  <img src="logo-header-white.png" alt="Ayke Solutions">
+  <p>Ayke Solutions — Marketing digital pour PME locales &amp; e-commerce<br>
+  Suisse romande &amp; France voisine · <a href="index.html">ayke-solutions.com</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+</footer>
+
+<!-- hidden iframe: capture Brevo sans quitter la page -->
+<iframe name="ayke_iframe" style="display:none" title="ayke"></iframe>
+<script>
+function aykeJoin(){
+  setTimeout(function(){
+    document.getElementById('aykeForm').style.display='none';
+    document.getElementById('aykeSuccess').style.display='block';
+  }, 500);
+}
+</script>
+</body>
+</html>
