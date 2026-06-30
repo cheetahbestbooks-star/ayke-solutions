@@ -50,7 +50,7 @@ a{text-decoration:none;color:inherit}
 .header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 0;background:rgba(3,12,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06)}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
 .logo-link{display:flex;align-items:center}
-.logo-link img{height:52px;width:auto;display:block}
+.logo-link img{height:44px;width:auto;display:block}
 .logo-fallback{font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700;letter-spacing:.5px;color:#fff}
 .logo-fallback b{color:var(--v2-coral)}
 .nav{display:flex;align-items:center;gap:32px}
