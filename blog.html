@@ -63,14 +63,14 @@ a{text-decoration:none;color:inherit}
 .news a.btn{display:inline-block;background:var(--v2-coral);color:#fff;font-weight:700;padding:13px 26px;border-radius:10px;box-shadow:0 0 28px rgba(255,90,44,.3)}
 .footer{background:#020810;border-top:1px solid rgba(255,255,255,.06);padding:30px 0;text-align:center;color:rgba(255,255,255,.35);font-size:.85rem}
 .footer a{color:var(--v2-blue)}
-@media(max-width:860px){.grid{grid-template-columns:1fr}.nav a:not(.btn){display:none}}
+.navtgl{display:none}.burger{display:none}@media(max-width:860px){.grid{grid-template-columns:1fr}.burger{display:block;cursor:pointer;color:#fff;font-size:1.7rem;line-height:1;user-select:none;-webkit-tap-highlight-color:transparent}.nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(3,12,26,.98);border-bottom:1px solid rgba(255,255,255,.08);padding:6px 0;display:none}.navtgl:checked~.nav{display:flex}.nav a{padding:13px 24px}.nav .btn{margin:8px 24px;text-align:center}}
 </style>
 </head>
 <body>
 <div class="top-line"></div>
 <header class="header"><div class="container header-inner">
   <a class="logo-link" href="index.html"><img src="logo-header-white.png" alt="Ayke Solutions" onerror="this.outerHTML='<span class=&quot;logo-fallback&quot;>AYKE <b>SOLUTIONS</b></span>'"></a>
-  <nav class="nav">
+  <input type="checkbox" id="navtgl" class="navtgl"><label for="navtgl" class="burger" aria-label="Menu">☰</label><nav class="nav">
     <a href="index.html#services">Services</a>
     <a href="index.html#resultats">Résultats</a>
     <a href="index.html#ressources">Ressources</a>

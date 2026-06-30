@@ -27,7 +27,7 @@ a{text-decoration:none}
 .nav .cta{background:#ff5a2c;color:#fff;padding:9px 18px;border-radius:8px;font-weight:700}
 .nav .cta:hover{color:#fff;transform:translateY(-1px)}
 .burger{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer}
-@media(max-width:880px){.nav{display:none}.burger{display:block}}
+.navtgl{display:none}@media(max-width:880px){.burger{display:block}.nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(3,12,26,.98);border-bottom:1px solid rgba(255,255,255,.08);padding:6px 0;display:none}.navtgl:checked~.nav{display:flex}.nav a{padding:13px 24px}.nav .cta{margin:8px 24px;text-align:center}}
 /* ===== HERO ===== */
 .hero{padding:130px 24px 60px;background:radial-gradient(circle at 70% 0%,rgba(21,101,192,.18),transparent 55%),radial-gradient(circle at 0% 90%,rgba(255,90,44,.12),transparent 50%),#030c1a}
 .hero-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
@@ -85,15 +85,15 @@ a{text-decoration:none}
 <header class="hdr">
   <div class="hdr-in">
     <a href="index.html"><img src="logo-header-white.png" alt="Ayke Solutions"></a>
-    <nav class="nav">
+    <input type="checkbox" id="navtgl" class="navtgl"><label for="navtgl" class="burger" aria-label="Menu">☰</label><nav class="nav">
       <a href="index.html#services">Services</a>
       <a href="index.html#resultats">Résultats</a>
       <a href="index.html#ressources">Ressources</a>
       <a href="blog.html">Blog</a>
-      <a href="index.html#apropos">À propos</a>
+      <a href="index.html#a-propos">À propos</a>
       <a class="cta" href="index.html#contact">Audit Gratuit</a>
     </nav>
-    <button class="burger" onclick="document.querySelector('.nav').style.display='flex'">☰</button>
+    
   </div>
 </header>
 
