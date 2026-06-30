@@ -34,7 +34,7 @@ a{text-decoration:none;color:inherit}
 .bhero::after{content:'';position:absolute;bottom:-40%;left:-10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.12),transparent 65%);pointer-events:none}
 .bhero .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--v2-coral);margin-bottom:18px}
 .bhero h1{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:800;letter-spacing:-1px;line-height:1.05;position:relative;z-index:1}
-.bhero h1 .g{background:linear-gradient(90deg,var(--v2-coral),var(--v2-blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.bhero h1{display:flex;flex-direction:column;align-items:center;line-height:.9;font-family:'Oswald','Inter',sans-serif;text-transform:uppercase;letter-spacing:-1px;font-weight:700}.bhero h1 .s1{font-size:clamp(1.5rem,3.4vw,2.3rem);color:#fff}.bhero h1 .s2{font-size:clamp(2.2rem,6vw,3.8rem);color:var(--v2-coral);margin-top:-.04em}
 .bhero p{color:rgba(255,255,255,.55);font-size:1.1rem;max-width:640px;margin:18px auto 0;position:relative;z-index:1}
 .filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:32px 0 8px}
 .pill{border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);color:#fff;font-weight:600;font-size:.85rem;padding:9px 18px;border-radius:30px;cursor:pointer;transition:.2s}
@@ -64,7 +64,7 @@ a{text-decoration:none;color:inherit}
 .footer{background:#020810;border-top:1px solid rgba(255,255,255,.06);padding:30px 0;text-align:center;color:rgba(255,255,255,.35);font-size:.85rem}
 .footer a{color:var(--v2-blue)}
 .navtgl{display:none}.burger{display:none}@media(max-width:860px){.grid{grid-template-columns:1fr}.burger{display:block;cursor:pointer;color:#fff;font-size:1.7rem;line-height:1;user-select:none;-webkit-tap-highlight-color:transparent}.nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:rgba(3,12,26,.98);border-bottom:1px solid rgba(255,255,255,.08);padding:6px 0;display:none}.navtgl:checked~.nav{display:flex}.nav a{padding:13px 24px}.nav .btn{margin:8px 24px;text-align:center}}
-.m-toggle{display:none;background:none;border:0;cursor:pointer;color:#fff;font-size:1.7rem;line-height:1;padding:0}.m-menu{position:fixed;inset:0;z-index:2000;background:rgba(3,12,26,.98);display:none;flex-direction:column;align-items:center;justify-content:center;gap:22px}.m-menu.open{display:flex}.m-menu a{color:#fff;font-size:1.25rem;font-weight:600}.m-menu .m-cta{background:#ff5a2c;padding:12px 26px;border-radius:9px}.m-close{position:absolute;top:18px;right:20px;background:none;border:0;color:#fff;font-size:2rem;line-height:1;cursor:pointer}@media(max-width:860){.m-toggle{display:block}}</style>
+.m-toggle{display:none;background:none;border:0;cursor:pointer;color:#fff;font-size:1.7rem;line-height:1;padding:0}.m-menu{position:fixed;inset:0;z-index:2000;background:rgba(3,12,26,.98);display:none;flex-direction:column;align-items:center;justify-content:center;gap:22px}.m-menu.open{display:flex}.m-menu a{color:#fff;font-size:1.25rem;font-weight:600}.m-menu .m-cta{background:#ff5a2c;padding:12px 26px;border-radius:9px}.m-close{position:absolute;top:18px;right:20px;background:none;border:0;color:#fff;font-size:2rem;line-height:1;cursor:pointer}@media(max-width:860px){.m-toggle{display:block}}</style>
 </head>
 <body>
 <div class="top-line"></div>
@@ -82,7 +82,7 @@ a{text-decoration:none;color:inherit}
 
 <section class="bhero"><div class="container">
   <div class="eyebrow">Le blog Ayke Solutions</div>
-  <h1>Des conseils qui <span class="g">font gagner des clients</span></h1>
+  <h1><span class="s1">Des conseils qui</span><span class="s2">font gagner des clients</span></h1>
   <p>Deux expertises : acquisition pour les <strong>PME &amp; artisans</strong> (Google, SEO local) et performance <strong>e-commerce</strong> (Klaviyo, copywriting, conversion).</p>
 </div></section>
 
