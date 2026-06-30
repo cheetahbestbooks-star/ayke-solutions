@@ -65,14 +65,14 @@ a{text-decoration:none}
 .ft p{color:rgba(255,255,255,.4);font-size:.83rem;line-height:1.7}
 .ft a{color:rgba(255,255,255,.6)}
 @media(max-width:760px){.grid{grid-template-columns:1fr}}
-</style>
+.m-toggle{display:none;background:none;border:0;cursor:pointer;color:#fff;font-size:1.7rem;line-height:1;padding:0}.m-menu{position:fixed;inset:0;z-index:2000;background:rgba(3,12,26,.98);display:none;flex-direction:column;align-items:center;justify-content:center;gap:22px}.m-menu.open{display:flex}.m-menu a{color:#fff;font-size:1.25rem;font-weight:600}.m-menu .m-cta{background:#ff5a2c;padding:12px 26px;border-radius:9px}.m-close{position:absolute;top:18px;right:20px;background:none;border:0;color:#fff;font-size:2rem;line-height:1;cursor:pointer}@media(max-width:880){.m-toggle{display:block}}</style>
 </head>
 <body>
 
 <header class="hdr">
   <div class="hdr-in">
     <a href="index.html"><img src="logo-header-white.png" alt="Ayke Solutions"></a>
-    <input type="checkbox" id="navtgl" class="navtgl"><label for="navtgl" class="burger" aria-label="Menu">☰</label><nav class="nav">
+    <button class="m-toggle" onclick="aykeOpen()" aria-label="Menu">☰</button><nav class="nav">
       <a href="index.html#services">Services</a><a href="index.html#resultats">Résultats</a><a href="index.html#ressources">Ressources</a>
       <a href="blog.html">Blog</a>
       <a href="membres.html">Espace membres</a>
@@ -80,7 +80,7 @@ a{text-decoration:none}
       <a class="cta" href="index.html#contact">Audit Gratuit</a>
     </nav>
   </div>
-</header>
+</header><div class="m-menu" id="aykeMenu"><button class="m-close" onclick="aykeClose()" aria-label="Fermer">✕</button><a href="index.html#services" onclick="aykeClose()">Services</a><a href="index.html#resultats" onclick="aykeClose()">Résultats</a><a href="index.html#ressources" onclick="aykeClose()">Ressources</a><a href="blog.html" onclick="aykeClose()">Blog</a><a href="membres.html" onclick="aykeClose()">Espace membres</a><a href="index.html#a-propos" onclick="aykeClose()">À propos</a><a href="index.html#contact" class="m-cta" onclick="aykeClose()">Audit Gratuit</a></div>
 
 <section class="hero">
   <div class="hero-in">
@@ -181,5 +181,5 @@ a{text-decoration:none}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Travaillez-vous avec les entreprises de Sion, Martigny et Sierre ?","acceptedAnswer":{"@type":"Answer","text":"Oui. J'accompagne les PME, artisans, commerces, acteurs du tourisme et e-commerçants de Sion, Martigny, Sierre, Monthey et de tout le Valais romand."}},{"@type":"Question","name":"Gérez-vous la saisonnalité touristique ?","acceptedAnswer":{"@type":"Answer","text":"Oui, c'est un point clé en Valais : on cale les campagnes et contenus sur les pics de saison (hiver/été) pour maximiser les réservations et les demandes."}},{"@type":"Question","name":"En combien de temps voit-on des résultats ?","acceptedAnswer":{"@type":"Answer","text":"Les premiers résultats arrivent en 10-14 jours. Pour les PME, les premières demandes qualifiées sous 30 jours ; pour l'e-commerce, les flows génèrent des revenus dès la première semaine."}},{"@type":"Question","name":"Faut-il commencer par un audit ?","acceptedAnswer":{"@type":"Answer","text":"C'est le point d'entrée recommandé : un audit gratuit de votre visibilité permet de proposer un plan adapté à votre marché valaisan."}}]}
 </script>
-</body>
+<script>function aykeOpen(){document.getElementById("aykeMenu").classList.add("open");document.body.style.overflow="hidden"}function aykeClose(){document.getElementById("aykeMenu").classList.remove("open");document.body.style.overflow=""}</script></body>
 </html>
