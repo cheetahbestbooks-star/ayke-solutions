@@ -165,7 +165,6 @@ const todayISO = new Date().toISOString().slice(0,10);
 const urls = [
   {loc:"https://ayke-solutions.com/", pri:"1.0", lastmod:todayISO},
   {loc:"https://ayke-solutions.com/blog.html", pri:"0.8", lastmod:todayISO},
-  {loc:"https://ayke-solutions.com/mentions-legales.html", pri:"0.3", lastmod:todayISO},
 ];
 live.forEach(p => urls.push({loc:"https://ayke-solutions.com/"+p.slug+".html", pri:"0.7", lastmod:p.date}));
 // Pages locales (zones desservies) — incluses si le fichier existe a la racine
