@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /audit/
 
 Sitemap: https://ayke-solutions.com/sitemap.xml
